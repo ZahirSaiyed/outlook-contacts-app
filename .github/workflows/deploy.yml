@@ -23,7 +23,7 @@ jobs:
             auth: {
               clientId: '${{ secrets.AZURE_CLIENT_ID }}',
               authority: 'https://login.microsoftonline.com/common',
-              redirectUri: 'https://zahirsaiyed.github.io/outlook-contacts-app/',
+              redirectUri: 'outlook-contacts-app-git-main-zahirsaiyeds-projects.vercel.app',
             },
             cache: {
               cacheLocation: 'sessionStorage',
