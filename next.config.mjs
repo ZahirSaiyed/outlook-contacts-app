@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  basePath: '/outlook-contacts-app',
-  assetPrefix: '/outlook-contacts-app/',
+  output: 'standalone',
+  reactStrictMode: true,
 };
 
 export default nextConfig;
