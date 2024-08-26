@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { MsalProvider } from "@azure/msal-react";
 import { PublicClientApplication } from "@azure/msal-browser";
+import { Client } from "@microsoft/microsoft-graph-client";
 import { msalConfig } from '../config';
 
 const inter = Inter({ subsets: ["latin"] });
