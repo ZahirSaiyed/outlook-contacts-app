@@ -1,12 +1,17 @@
 import React from 'react';
 import { useMsal } from "@azure/msal-react";
-import { graphScopes } from '../../config';
+import { graphScopes, msalConfig } from '../../config';
 
 export const OutlookSignInButton = () => {
   const { instance } = useMsal();
 
   const handleSignIn = () => {
-    instance.loginPopup({scopes: graphScopes}).catch(console.error);
+    const loginRequest = {
+      scopes: graphScopes,
+      extraQueryParameters: { client_id: msalConfig.auth.clientId }
+    };
+
+    instance.loginPopup(loginRequest).catch(console.error);
   };
 
   return (
