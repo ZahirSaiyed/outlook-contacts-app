@@ -1,6 +1,9 @@
+const clientId = process.env.AZURE_CLIENT_ID || '';
+console.log('Client ID:', clientId);
+
 export const msalConfig = {
   auth: {
-    clientId: process.env.AZURE_CLIENT_ID || '',
+    clientId: clientId,
     authority: 'https://login.microsoftonline.com/common',
     redirectUri: process.env.REDIRECT_URI || '',
   },
