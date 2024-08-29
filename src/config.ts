@@ -1,10 +1,8 @@
-const clientId = process.env.AZURE_CLIENT_ID;
-
 export const msalConfig = {
     auth: {
-      clientId: clientId!,
+      clientId: process.env.NEXT_PUBLIC_AZURE_CLIENT_ID || '',
       authority: 'https://login.microsoftonline.com/common',
-      redirectUri: process.env.REDIRECT_URI || 'http://localhost:3000',
+      redirectUri: process.env.NEXT_PUBLIC_REDIRECT_URI || 'http://localhost:3000',
     },
     cache: {
       cacheLocation: "sessionStorage",

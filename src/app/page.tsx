@@ -267,7 +267,7 @@ function ContactList({ setContacts }: { setContacts: React.Dispatch<React.SetSta
   useEffect(() => {
     const fetchContacts = async () => {
       if (accounts[0]) {
-        const authProvider = new AuthCodeMSALBrowserAuthenticationProvider(instance as PublicClientApplication, {
+        const authProvider = new AuthCodeMSALBrowserAuthenticationProvider(instance as any, {
           account: accounts[0],
           scopes: graphScopes,
           interactionType: InteractionType.Popup

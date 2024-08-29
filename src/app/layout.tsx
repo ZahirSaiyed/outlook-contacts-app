@@ -8,7 +8,7 @@ import { msalConfig } from '../config';
 
 const inter = Inter({ subsets: ["latin"] });
 
-const msalInstance = new PublicClientApplication(msalConfig);
+const pca = new PublicClientApplication(msalConfig);
 
 export default function RootLayout({
   children,
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <MsalProvider instance={msalInstance}>
+      <MsalProvider instance={pca}>
         <body className={inter.className}>{children}</body>
       </MsalProvider>
     </html>
